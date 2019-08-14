@@ -14,8 +14,8 @@ Create object to save all listed endoints
 ```
 var  pathList  = [];
 
-for(let i = 0; i  <  listEndpoints(app).length; i++) {
-	pathList[i] = {url:  listEndpoints(app)[i].path}
+for(let i = 0; i < listEndpoints(app).length; i++) {
+	pathList[i] = {url: listEndpoints(app)[i].path}
 }
 ```
 Define your sitemap conf
@@ -33,10 +33,10 @@ Create sitemap page
 app.get('/sitemap.xml', function(req, res) {
 	sitemap.toXML(function (err, xml) {
 		if(err) {
-			return  res.status(500).end();
+			return res.status(500).end();
 		}
 		res.header('Content-Type', 'application/xml');
-		res.send( xml );
+		res.send(xml);
 	});
 });
 ```
